@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 
 // TODO: Include packages needed for this application
-console.log("Hello!")
+
 // TODO: Create an array of questions for user input
 const promptUser = collectedAnswers => {
     return inquirer.prompt(
@@ -89,8 +89,10 @@ const promptUser = collectedAnswers => {
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    console.log("Hello")
+}
 
 // Function call to initialize app
+init()
 promptUser();
-init();
