@@ -64,10 +64,10 @@ const promptUser = () => {
             }
         },
         {
-            type: 'checkbox',
+            type: 'input',
             name: 'license',
-            message: 'What license(s) does this application use?',
-            choices: ['A', 'B', 'C', 'D', 'E']
+            message: 'What license does this application use?',
+            default: ''
         },
         {
             type: 'input',
@@ -79,6 +79,20 @@ const promptUser = () => {
                 }
                 else {
                     console.log ('Please explain if/how another developer may contribute!')
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'test',
+            message: 'Please provide a sample test of your application.',
+            validate: testInput => {
+                if (testInput) {
+                    return true
+                }
+                else {
+                    console.log ('Please provide a sample test!')
                     return false;
                 }
             }
