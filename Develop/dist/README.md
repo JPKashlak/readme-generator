@@ -13,10 +13,10 @@
 It will provide users with a sample on how a README generator works.
 
 ## Installation
-1 Clonme from GitHub 2 From root directory run 'npm init' 3 Run 'npm install inquirer'
+1 Clone from GitHub 2 From root directory run 'npm init' 3 Run 'npm install inquirer'
 
 ## Usage
-Go to the comman line, find the Develop directory, and run 'node index'
+Go to the command line, find the Develop directory, and run 'node index'
 
 ## Languages
  JavaScript, ES6, Node
