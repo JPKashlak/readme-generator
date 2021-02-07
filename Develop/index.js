@@ -64,10 +64,23 @@ const promptUser = () => {
             }
         },
         {
-            type: 'input',
+            type: 'checkbox',
+            name: 'languages',
+            message: 'What did you this project with? (Check all that apply)',
+            choices: [' JavaScript', ' HTML', ' CSS', ' ES6', ' jQuery', ' Bootstrap', ' Node',],
+        },
+        {
+            type: 'confirm',
+            name: 'confirmLicense',
+            message: 'Would you like to provide a license for this repository?',
+            default: true
+        },
+        {
+            type: 'list',
             name: 'license',
-            message: 'What license does this application use?',
-            default: ''
+            message: 'What license does this application use?', 
+            choices: ['MIT', 'ISC', 'GPLv3', 'PDDL'],
+            when: ({ confirmLicense }) => confirmLicense
         },
         {
             type: 'input',
